@@ -1,0 +1,133 @@
+# Kodi Media Center language file
+# Addon Name: Trakt
+# Addon id: script.trakt
+# Addon Provider: Chili Palmer
+msgid ""
+msgstr ""
+"Project-Id-Version: XBMC-Addons\n"
+"Report-Msgid-Bugs-To: vieil.anarchiste@gmail.com\n"
+"POT-Creation-Date: 2017-02-22 17:04+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+#General Settings
+
+msgctxt "#32000"
+msgid "User name"
+msgstr ""
+
+msgctxt "#32001"
+msgid "Password"
+msgstr ""
+
+msgctxt "#32002"
+msgid "Region"
+msgstr ""
+
+msgctxt "#32003"
+msgid "Polling timer"
+msgstr ""
+
+msgctxt "#32004"
+msgid "USA"
+msgstr ""
+
+msgctxt "#32005"
+msgid "Europe"
+msgstr ""
+
+msgctxt "#32006"
+msgid "Canada"
+msgstr ""
+
+msgctxt "#32007"
+msgid "Australia"
+msgstr ""
+
+msgctxt "#32008"
+msgid "Japan"
+msgstr ""
+
+
+msgctxt "#32050"
+msgid "Connecting to carwings server"
+msgstr ""
+
+msgctxt "#32051"
+msgid "Choose action:"
+msgstr ""
+
+msgctxt "#32052"
+msgid "Get status"
+msgstr ""
+
+msgctxt "#32053"
+msgid "Start charging"
+msgstr ""
+
+msgctxt "#32054"
+msgid "Start climate control"
+msgstr ""
+
+msgctxt "#32055"
+msgid "Stop climate control"
+msgstr ""
+
+msgctxt "#32056"
+msgid "Yes"
+msgstr ""
+
+msgctxt "#32057"
+msgid "No"
+msgstr ""
+
+msgctxt "#32058"
+msgid "Connected"
+msgstr ""
+
+msgctxt "#32059"
+msgid "Not connected"
+msgstr ""
+
+msgctxt "#32060"
+msgid "Leaf status"
+msgstr ""
+
+msgctxt "#32061"
+msgid "Contacting server"
+msgstr ""
+
+msgctxt "#32062"
+msgid "Charging: "
+msgstr ""
+
+msgctxt "#32063"
+msgid "Status: "
+msgstr ""
+
+msgctxt "#32064"
+msgid "Estimated range: "
+msgstr ""
+
+msgctxt "#32065"
+msgid "Unknown"
+msgstr ""
+
+msgctxt "#32066"
+msgid "Fetching datas from server"
+msgstr ""
+
+
+
+
+
+
+msgctxt "#32999"
+msgid "Function not implemented"
+msgstr ""
+
