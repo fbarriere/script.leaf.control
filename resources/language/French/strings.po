@@ -122,9 +122,29 @@ msgctxt "#32066"
 msgid "Fetching datas from server"
 msgstr "Récupération des données du serveur"
 
+msgctxt "#32070"
+msgid "Starting climate control"
+msgstr "Demarrage de la climatisation"
 
+msgctxt "#32071"
+msgid "Stopping climate control"
+msgstr "Arret de la climatisation"
 
+msgctxt "#32072"
+msgid "Climate control started"
+msgstr "Climatisation démarrée"
 
+msgctxt "#32073"
+msgid "Climate control stopped"
+msgstr "Climatisation arretée"
+
+msgctxt "#32074"
+msgid "Started charging"
+msgstr "Démarrage de la charge"
+
+msgctxt "#32075"
+msgid "Failed to start charging"
+msgstr "Echec de la charge"
 
 
 msgctxt "#32999"

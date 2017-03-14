@@ -22,6 +22,8 @@ def _(msg):
 
 
 def build_config(addon):
+    """Fetch the configuration settings and return a dict.
+    """
     
     config = dict()
     
@@ -35,7 +37,19 @@ def build_config(addon):
     return config
 
 
+def feedback(msg, type=xbmcgui.NOTIFICATION_INFO):
+    """Open a Kodi dialog with the given message. 
+    Simple wrapper in case we decide to change the way we inform the user,
+    we just need to change the ode of this function...
+    """
+    
+    xbmcgui.Dialog().notification(_(32060), msg, type)
+
+
 def leaf_connect(config):
+    """Connection to the carwings server. The connection elements
+    are taken from the config dict.
+    """
     
     feedback(_(32050))
 
@@ -102,26 +116,52 @@ def get_leaf_status(leaf, config):
             break
     
 
-def start_climate_control(leaf):
+def start_climate_control(leaf, config):
     """Start the climate control.
     """
-    feedback(_(32999), xbmcgui.NOTIFICATION_WARNING)
+    
+    feedback(_(32070))
+    
+    result_key = leaf.start_climate_control()    
+    
+    cc_status= None
+    
+    while cc_status is None:
+        time.sleep(int(config['timer']))
+        cc_status = leaf.get_start_climate_control_result(result_key)
+    
+    if cc_status and cc_status.is_hvac_running:
+        feedback(_(32072))
 
  
-def stop_climate_control(leaf):
+def stop_climate_control(leaf, config):
     """Stop the climate control.
     """
-    feedback(_(32999), xbmcgui.NOTIFICATION_WARNING)
+
+    feedback(_(32071))
+    
+    result_key = leaf.stop_climate_control()
+        
+    cc_status= None
+    
+    while cc_status is None:
+        time.sleep(int(config['timer']))
+        cc_status = leaf.get_stop_climate_control_result(result_key)
+    
+    if cc_status and not cc_status.is_hvac_running:
+        feedback(_(32073))
 
  
-def start_charging(leaf):
+def start_charging(leaf, config):
     """Start charging.
     """
-    feedback(_(32999), xbmcgui.NOTIFICATION_WARNING)
-    
 
-def feedback(msg, type=xbmcgui.NOTIFICATION_INFO):
-    xbmcgui.Dialog().notification(_(32060), msg, type)
+    feedback(_(32074))
+    
+    if leaf.start_charging():
+        feedback(_(32074))
+    else:
+        feedback(_(32075))
 
 
 def leaf_main():
@@ -143,11 +183,11 @@ def leaf_main():
     if selection == 0:
         get_leaf_status(leaf, config)
     elif selection == 1:
-        start_charging(leaf)
+        start_charging(leaf, config)
     elif selection == 2:
-        start_climate_control(leaf)
+        start_climate_control(leaf, config)
     elif selection == 3:
-        stop_climate_control(leaf)
+        stop_climate_control(leaf, config)
     
 
 leaf_main()
