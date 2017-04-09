@@ -1,3 +1,6 @@
 [submodule "resources/lib/pycarwings2"]
 	path = resources/lib/pycarwings2
 	url = https://github.com/jdhorne/pycarwings2.git
+[submodule "resources/lib/requests"]
+	path = resources/lib/requests
+	url = https://github.com/kennethreitz/requests.git
